@@ -1,0 +1,9 @@
+{
+  "scripts": {
+    "postinstall": "npx playwright install chromium"
+  },
+  "dependencies": {
+    "playright": "^0.0.22",
+    "ts-node": "^10.9.2"
+  }
+}

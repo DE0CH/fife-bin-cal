@@ -14,26 +14,21 @@ The code in this repository automates the process using [Playwright](https://pla
 
 ### Installing dependencies
 
-1. Install [Deno](https://docs.deno.com/runtime/).
-    Other Javascript runtimes should also work, although modification to the code is required.
-1. Install Playwright.
-    Using Deno, one can run:
+1. Install [Node.js](https://nodejs.org/).
+1. Install dependencies.
+    Using npm, one can run:
     ```sh
-    deno run --allow-all npm:playwright install --no-shell chromium
+    npm install
     ```
-    Remove the `--allow-all` option if you want to grant permissions (_e.g._ read, write, env) manually.
     You may need to install some system dependencies.
     See also [official instructions](https://playwright.dev/docs/intro), which uses npm.
 
 ### Running
 
 Clone this repository and run
-
 ```sh
-deno run --allow-all main.ts <postcode> <number>
+npx ts-node main.ts <postcode> <number>
 ```
-
-Remove the `--allow-all` option if you want to grant permissions (_e.g._ read, write, env) manually.
 
 The script `main.ts` takes two positional arguments.
 Both arguments are case-insensitive.
@@ -42,7 +37,7 @@ Usually it is the house number.
 
 For example, running
 ```sh
-deno run --allow-all main.ts 'KY16 9AJ' 'College Gate'
+npx ts-node main.ts 'KY16 9AJ' 'College Gate'
 ```
 resulted in the following output on 2025-02-08:
 ```text
